@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!--esta es mi practica 67-->
+
+<head>
+    <title>Practica 67</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <input type="text" id="text" maxlength="200" size="200">
+    <br>
+    <p>Maximum number of characters available:<span id="c">200</span></p>
+
+    <script>
+        addEventListener('DOMContentLoaded', start, false);
+
+        function start() {
+            document.getElementById('text').addEventListener('keyup', pam, false);
+        }
+
+        function pam() {
+            var cab;
+            var available;
+            cab = document.getElementById('text').value.length;
+            available = 200 - parseInt(cab);
+            document.getElementById('c').innerHTML = available;
+        }
+    </script>
+
+</body>
+
+</html>
